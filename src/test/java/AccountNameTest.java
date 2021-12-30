@@ -18,7 +18,7 @@ public class AccountNameTest {
     public static Object[][] checkNameToEmboss(){
         return new Object[][]{
                 {"Лиза Гурова", true},
-                {"Ё Ёё", true},
+                {"раÖä47 Ёfgj#_!", true},
                 {"ЛизaГурова", false},
                 {"Лизa  Гурова", false},
                 {"E B Гурова", false},
@@ -27,7 +27,10 @@ public class AccountNameTest {
                 {"Йцукенгш Щзхъфывапрй", false},
                 {"", false},
                 {" Лиза Гурова", false},
-                {"Лиза Гурова ", false}
+                {"Лиза Гурова ", false},
+                {" ЛизаГурова", false},
+                {"ЛизаГурова ", false},
+                {null, false}
         };
     }
 

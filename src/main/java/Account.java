@@ -7,8 +7,8 @@ public class Account {
     }
 
     public boolean checkNameToEmboss() {
-        if (name.length() >= 3 && name.length() <= 19){
-            return name.matches("^[а-яА-ЯёЁ]+\\s[а-яА-ЯёЁ]+$");
+        if (name != null){
+            return name.matches(("^.{3,19}$")) && name.matches("^[\\S]+\\s[\\S]+$");
         } else {return false;}
     }
 }
